@@ -27,11 +27,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "NavigationActionLink",
-            dependencies: [
-                .product(name: "ViewInspector", package: "ViewInspector"),
-            ]),
+            dependencies: []),
         .testTarget(
             name: "NavigationActionLinkTests",
-            dependencies: ["NavigationActionLink"]),
+            dependencies: [
+                "NavigationActionLink",
+                .product(name: "ViewInspector", package: "ViewInspector"),
+            ]),
     ]
 )
