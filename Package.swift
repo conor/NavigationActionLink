@@ -32,7 +32,7 @@ let package = Package(
             name: "NavigationActionLinkTests",
             dependencies: [
                 "NavigationActionLink",
-                .product(name: "ViewInspector", package: "ViewInspector"),
+                "ViewInspector",
             ]),
     ]
 )
